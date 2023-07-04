@@ -1,0 +1,11 @@
+Test-Command: /usr/share/cargo/bin/cargo-auto-test ansi_term 0.12.1 --all-targets --all-features
+Depends: dh-cargo (>= 18), librust-doc-comment-0.3+default-dev, librust-regex-1+default-dev (>= 1.1.9-~~), librust-serde-json-1+default-dev (>= 1.0.39-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test ansi_term 0.12.1 --all-targets --no-default-features
+Depends: dh-cargo (>= 18), librust-doc-comment-0.3+default-dev, librust-regex-1+default-dev (>= 1.1.9-~~), librust-serde-json-1+default-dev (>= 1.0.39-~~), librust-ansi-term-dev
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test ansi_term 0.12.1 --all-targets --features derive_serde_style
+Depends: dh-cargo (>= 18), librust-doc-comment-0.3+default-dev, librust-regex-1+default-dev (>= 1.1.9-~~), librust-serde-json-1+default-dev (>= 1.0.39-~~), librust-ansi-term+derive-serde-style-dev
+Restrictions: allow-stderr, skip-not-installable
